@@ -64,7 +64,7 @@ hawkrattleDelta_mean, hawkrattleDelta_median, hawkrattleDelta_variance = essenti
 hawkrattleTheta_mean, hawkrattleTheta_median, hawkrattleTheta_variance = essentialStats(hawkrattleTheta)
 
 print "\n\nESSENTIAL STATS FOR DATASET HAWKRATTLE\n"
-print "\tMEAN","\t\t","MEDIAN","\t\t","MODE\n"
+print "\tMEAN","\t\t","MEDIAN","\t","VARIANCE\n"
 print "LowAlpha\t",hawkrattleLowAlpha_mean,'\t', hawkrattleLowAlpha_median,'\t', hawkrattleLowAlpha_variance
 print "HighAlpha\t",hawkrattleHighAlpha_mean,'\t', hawkrattleHighAlpha_median,'\t', hawkrattleHighAlpha_variance
 print "LowBeta\t",hawkrattleLowBeta_mean,'\t', hawkrattleLowBeta_median,'\t', hawkrattleLowBeta_variance
@@ -93,7 +93,7 @@ vaticanDelta_mean, vaticanDelta_median, vaticanDelta_variance = essentialStats(v
 vaticanTheta_mean, vaticanTheta_median, vaticanTheta_variance = essentialStats(vaticanTheta)
 
 print "\n\nESSENTIAL STATS FOR DATASET VATICAN\n"
-print "\tMEAN","\t\t","MEDIAN","\t\t","MODE\n"
+print "\tMEAN","\t\t","MEDIAN","\t","VARIANCE\n"
 print "LowAlpha\t",vaticanLowAlpha_mean,'\t', vaticanLowAlpha_median,'\t', vaticanLowAlpha_variance
 print "HighAlpha\t",vaticanHighAlpha_mean,'\t', vaticanHighAlpha_median,'\t', vaticanHighAlpha_variance
 print "LowBeta\t",vaticanLowBeta_mean,'\t', vaticanLowBeta_median,'\t', vaticanLowBeta_variance
@@ -122,7 +122,7 @@ visionaryDelta_mean, visionaryDelta_median, visionaryDelta_variance = essentialS
 visionaryTheta_mean, visionaryTheta_median, visionaryTheta_variance = essentialStats(visionaryTheta)
 
 print "\n\nESSENTIAL STATS FOR DATASET VISIONARY\n"
-print "\tMEAN","\t\t","MEDIAN","\t\t","MODE\n"
+print "\tMEAN","\t\t","MEDIAN","\t","VARIANCE\n"
 print "LowAlpha\t",visionaryLowAlpha_mean,'\t', visionaryLowAlpha_median,'\t', visionaryLowAlpha_variance
 print "HighAlpha\t",visionaryHighAlpha_mean,'\t', visionaryHighAlpha_median,'\t', visionaryHighAlpha_variance
 print "LowBeta\t",visionaryLowBeta_mean,'\t', visionaryLowBeta_median,'\t', visionaryLowBeta_variance
