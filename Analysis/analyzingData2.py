@@ -39,9 +39,34 @@ def getAllValues(s,n):
                     
             return lowAlpha,highAlpha,lowBeta,highBeta,lowGamma,midGamma,delta,theta
 
+def essentialStats(array):
+    analyzedMean = np.average(array)
+    analyzedMedian = np.median(array)
+    analyzedVariance = np.var(array)
+    return analyzedMean,analyzedMedian,analyzedVariance
+    
 s = "/home/suryo/MyStuff/MyDevelopment/Cerebro/Data Tools/Data/CerebroCSV/datasets/hawkrattle/hawkrattle"
 n = 10
 hawkrattleLowAlpha, hawkrattleHighAlpha, hawkrattleLowBeta, hawkrattleHighBeta, hawkrattleLowGamma, hawkrattleMidGamma, hawkrattleDelta, hawkrattleTheta = getAllValues(s,n)
+
+hawkrattleLowAlpha_mean, hawkrattleLowAlpha_median, hawkrattleLowAlpha_variance = essentialStats(hawkrattleLowAlpha)
+hawkrattleHighAlpha_mean, hawkrattleHighAlpha_median, hawkrattleHighAlpha_variance = essentialStats(hawkrattleHighAlpha)
+hawkrattleLowBeta_mean, hawkrattleLowBeta_median, hawkrattleLowBeta_variance = essentialStats(hawkrattleLowBeta)
+hawkrattleHighBeta_mean, hawkrattleHighBeta_median, hawkrattleHighBeta_variance = essentialStats(hawkrattleHighBeta)
+hawkrattleLowGamma_mean, hawkrattleLowGamma_median, hawkrattleLowGamma_variance = essentialStats(hawkrattleLowGamma)
+hawkrattleMidGamma_mean, hawkrattleMidGamma_median, hawkrattleMidGamma_variance = essentialStats(hawkrattleMidGamma)
+hawkrattleDelta_mean, hawkrattleDelta_median, hawkrattleDelta_variance = essentialStats(hawkrattleDelta)
+hawkrattleTheta_mean, hawkrattleTheta_median, hawkrattleTheta_variance = essentialStats(hawkrattleTheta)
+
+print hawkrattleLowAlpha_mean,'\t', hawkrattleLowAlpha_median,'\t', hawkrattleLowAlpha_variance
+print hawkrattleHighAlpha_mean,'\t', hawkrattleHighAlpha_median,'\t', hawkrattleHighAlpha_variance
+print hawkrattleLowBeta_mean,'\t', hawkrattleLowBeta_median,'\t', hawkrattleLowBeta_variance
+print hawkrattleHighBeta_mean,'\t', hawkrattleHighBeta_median,'\t', hawkrattleHighBeta_variance
+print hawkrattleLowGamma_mean,'\t', hawkrattleLowGamma_median,'\t', hawkrattleLowGamma_variance
+print hawkrattleMidGamma_mean,'\t', hawkrattleMidGamma_median,'\t', hawkrattleMidGamma_variance
+print hawkrattleDelta_mean,'\t', hawkrattleDelta_median,'\t', hawkrattleDelta_variance
+print hawkrattleTheta_mean,'\t', hawkrattleTheta_median,'\t', hawkrattleTheta_variance
+"""
 plt.figure("hv1,hv5")
 plt.xlabel("hv1")
 plt.ylabel("hv5")
@@ -49,7 +74,6 @@ plt.plot(hawkrattleLowAlpha,hawkrattleHighAlpha,'ro')
 plt.axis([0,10000,0,10000])
 plt.show()
 
-"""
 s = "/home/suryo/MyStuff/MyDevelopment/Cerebro/Data/CerebroCSV/datasets/vatican/vatican"
 n = 10
 hv0, hv1, hv2, hv3, hv4, hv5, hv6, hv7 = getAllValues(s,n)
