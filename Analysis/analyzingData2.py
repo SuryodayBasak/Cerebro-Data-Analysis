@@ -11,39 +11,45 @@ import matplotlib.pyplot as plt
 
 def getAllValues(s,n):
     
-    cols_0 = []
-    cols_1 = []
-    cols_2 = []
-    cols_3 = []
-    cols_4 = []
-    cols_5 = []
-    cols_6 = []
-    cols_7 = []
+    lowAlpha    = []
+    highAlpha   = []
+    lowBeta     = []
+    highBeta    = []
+    lowGamma    = []
+    midGamma    = []
+    delta       = []
+    theta       = []
     
-    for i in range(1,n):  
+    limit = 0
+    for i in range(1,n):
         with open(s+str(i)+".csv",'rb') as csvfile:
             reader = csv.reader(csvfile,delimiter=',')
             for row in reader:
-                cols_0.append(int(row[0]))
-                cols_1.append(int(row[1]))
-                cols_2.append(int(row[2]))
-                cols_3.append(int(row[3]))
-                cols_4.append(int(row[4]))
-                cols_5.append(int(row[5]))
-                cols_6.append(int(row[6]))
-                cols_7.append(int(row[7]))
-            return cols_0,cols_1,cols_2,cols_3,cols_4,cols_5,cols_6,cols_7
+                limit += 1
+                
+                if limit > 2:
+                    lowAlpha.append(int(row[0]))
+                    highAlpha.append(int(row[1]))
+                    lowBeta.append(int(row[2]))
+                    highBeta.append(int(row[3]))
+                    lowGamma.append(int(row[4]))
+                    midGamma.append(int(row[5]))
+                    delta.append(int(row[6]))
+                    theta.append(int(row[7]))
+                    
+            return lowAlpha,highAlpha,lowBeta,highBeta,lowGamma,midGamma,delta,theta
 
-s = "/home/suryo/MyStuff/MyDevelopment/Cerebro/Data/CerebroCSV/datasets/hawkrattle/hawkrattle"
+s = "/home/suryo/MyStuff/MyDevelopment/Cerebro/Data Tools/Data/CerebroCSV/datasets/hawkrattle/hawkrattle"
 n = 10
-hv0, hv1, hv2, hv3, hv4, hv5, hv6, hv7 = getAllValues(s,n)
+hawkrattleLowAlpha, hawkrattleHighAlpha, hawkrattleLowBeta, hawkrattleHighBeta, hawkrattleLowGamma, hawkrattleMidGamma, hawkrattleDelta, hawkrattleTheta = getAllValues(s,n)
 plt.figure("hv1,hv5")
 plt.xlabel("hv1")
 plt.ylabel("hv5")
-plt.plot(hv1,hv5,'ro')
+plt.plot(hawkrattleLowAlpha,hawkrattleHighAlpha,'ro')
 plt.axis([0,10000,0,10000])
 plt.show()
 
+"""
 s = "/home/suryo/MyStuff/MyDevelopment/Cerebro/Data/CerebroCSV/datasets/vatican/vatican"
 n = 10
 hv0, hv1, hv2, hv3, hv4, hv5, hv6, hv7 = getAllValues(s,n)
@@ -63,3 +69,4 @@ plt.ylabel("hv5")
 plt.plot(hv1,hv5,'ro')
 plt.axis([0,10000,0,10000])
 plt.show()
+"""
