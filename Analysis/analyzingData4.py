@@ -4,9 +4,7 @@ Created on Thu Aug  6 15:55:14 2015
 
 @author: suryo
 """
-"""
-Need to cross corelate
-"""
+
 import csv
 import numpy as np
 
@@ -59,7 +57,7 @@ class dataSetEssentials(object):
 
         
     def showEssentialStats(self):
-        
+        print np.correlate(self.lowAlpha,self.highAlpha)
         print "\n\n",self.dataSetName,"\n\n"
         print "\tMEAN","\t\t","MEDIAN","\t","VARIANCE\n"
         print "Low Alpha\t",self.lowAlpha_mean,"\t",self.lowAlpha_median,"\t",self.lowAlpha_variance
