@@ -4,7 +4,9 @@ Created on Thu Aug  6 15:55:14 2015
 
 @author: suryo
 """
-
+"""
+Need to cross corelate
+"""
 import csv
 import numpy as np
 
