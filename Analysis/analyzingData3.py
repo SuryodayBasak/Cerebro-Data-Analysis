@@ -7,7 +7,6 @@ Created on Wed Aug  5 22:49:14 2015
 
 import csv
 import numpy as np
-import matplotlib.pyplot as plt
 
 def getAllValues(s,n):
     
